@@ -1,4 +1,4 @@
-#SLGPT
+# SLGPT
 Uses transfer learning to generate Simulink models from scratch 
 
 ### Installation
