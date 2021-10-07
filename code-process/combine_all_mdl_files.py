@@ -19,10 +19,10 @@ def combine_all_mdl_files(sys):
 		cnt += 1
 		allfile.write("\n<|endoftext|>\n")
 	allfile.close()
-
-parser = argparse.ArgumentParser(
-    description='combine-all-model-to-single-file',
-    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--dataset_dir', metavar='PATH', type=str, required=True, help='directory')
-args = parser.parse_args()
-combine_all_mdl_files(args.dataset_dir)
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser(
+	    description='combine-all-model-to-single-file',
+	    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+	parser.add_argument('--dataset_dir', metavar='PATH', type=str, required=True, help='directory')
+	args = parser.parse_args()
+	combine_all_mdl_files(args.dataset_dir)
