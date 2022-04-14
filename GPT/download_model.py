@@ -11,12 +11,12 @@ model = sys.argv[1]
 
 subdir = os.path.join('models', model)
 if not os.path.exists(subdir):
-    os.makedirs(subdir)
+    os.makedirs(os.path.join("src",subdir))
 subdir = subdir.replace('\\','/') # needed for Windows
 
 for filename in ['checkpoint','encoder.json','hparams.json','model.ckpt.data-00000-of-00001', 'model.ckpt.index', 'model.ckpt.meta', 'vocab.bpe']:
 
-    r = requests.get("https://openaipublic.blob.core.windows.net/gpt-2/" + subdir + "/" + filename, stream=True)
+    r = requests.get("https://storage.googleapis.com/gpt-2/" + subdir + "/" + filename, stream=True)
 
     with open(os.path.join("src",subdir, filename), 'wb') as f:
         file_size = int(r.headers["content-length"])
