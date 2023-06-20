@@ -3,8 +3,6 @@ Uses transfer learning to generate Simulink models from scratch
 ## Recent News 
 Our SLGPT paper has been accepted at the Evaluation and Assessment in Software Engineering (EASE 2021, CORE: A, acceptance rate: 27%)!
 
-ICSE 2020 Data and Bugs
-
 ### Installation
 
 Tested  on Ubuntu 18.04
